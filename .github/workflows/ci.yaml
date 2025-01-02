@@ -1,0 +1,28 @@
+name: ci-workflow
+on:
+  push:
+    branches:
+      - develop
+  pull_request:
+    branches:
+      - develop
+jobs:
+  ci-job:
+    runs-on: ubuntu latest
+    steps:
+      - name: Welcome ci-workflow
+        run: echo "Welcome ci-workflow"
+      - name: Checkout Repo
+        run: actions/checkout@v4
+      - name: Info of Repo
+        run:  |
+          echo "Name of Repository: ${{github.repository}}"
+          echo "Types of Event: ${{github.event_name}}"
+          git --version
+          git branch
+          git log
+
+
+
+      
+  
