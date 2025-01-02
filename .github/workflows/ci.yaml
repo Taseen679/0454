@@ -13,7 +13,7 @@ jobs:
       - name: Welcome ci-workflow
         run: echo "Welcome ci-workflow"
       - name: Checkout Repo
-        run: actions/checkout@v4
+        uses: actions/checkout@v4
       - name: Info of Repo
         run:  |
           echo "Name of Repository: ${{github.repository}}"
